@@ -20,7 +20,7 @@ from newsapp import views
 
 
 urlpatterns = [
-    path('', include('newsapp.urls')),
     path('admin/', admin.site.urls),
+    path('', include('newsapp.urls')),
     
 ]
