@@ -55,10 +55,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "NewsSite.urls"
+#"DIRS": TEMPLATE_DIRS
 
 TEMPLATES = [
     {
-        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "BACKEND": "django.template.backends.django.DjangoTemplates",             
         "DIRS": TEMPLATE_DIRS,
         "APP_DIRS": True,
         "OPTIONS": {
@@ -121,3 +122,7 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+#AUTHENTICATION_BACKENDS = [
+    #'django.contrib.auth.backends.ModelBackend',  # Default Django authentication backend
+    #'newsapp.backends.CustomBackend',  # Custom authentication backend
+#]
