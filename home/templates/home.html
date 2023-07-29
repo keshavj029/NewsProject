@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+            
+
+    <h1>This is the home page for our WebSite</h1>
+    <p>today is {{ today }}</p>
+    <a href="{% url 'notes.list' %}" class="btn btn-primary">Notes</a>
+
+
+
+
+{% endblock %}
