@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+<form method="POST">{% csrf_token %}
+<p>Want to delete this ?" {{notes.title}}"</p>
+<input type ="submit" class ="btn btn-dnager" value="Confirm"/>
+
+</form>
+
+
+
+{% endblock %}
