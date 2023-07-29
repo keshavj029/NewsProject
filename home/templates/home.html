@@ -5,10 +5,18 @@
             
 
     <h1>This is the home page for our WebSite</h1>
-    <p>today is {{ today }}</p>
+   
+    <a href="{% url 'home.login' %}" class="btn btn-primary">Login</a>
+    <!-- <a href="{% url 'home.signup' %}" class="btn btn-primary">signup</a> -->
+    {% if user.is_authenticated %}    
     <a href="{% url 'notes.list' %}" class="btn btn-primary">Notes</a>
 
+    {% else %}
+    <a href="{% url 'home.signup' %}" class="btn btn-primary">signup</a>
+
+    
+    
 
 
-
+    {% endif %}
 {% endblock %}
